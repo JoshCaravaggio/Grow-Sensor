@@ -21,7 +21,6 @@ A breadboard schematic will be included soon
 
 #### Dependencies 
 *[Firebase Arduino](https://github.com/FirebaseExtended/firebase-arduino) for pushing datapoint objects to a Firebase Realtime DB
-
 *[NTPClient](https://github.com/arduino-libraries/NTPClient) for retrieving a UTC timestamp
 *[ArduinoJSON](https://github.com/bblanchon/ArduinoJson) for turning data into JSON objects to play nice with the Firebase library (Use Version 5.13.2)
 *[ESP8266 WiFi](https://github.com/esp8266/Arduino/tree/master/doc/esp8266wifi) for setting up wifi connection on ESP 12-E
