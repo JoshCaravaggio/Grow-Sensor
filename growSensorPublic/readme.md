@@ -20,13 +20,13 @@ A breadboard schematic will be included soon
 ## Documentation
 
 #### Dependencies 
-*[Firebase Arduino](https://github.com/FirebaseExtended/firebase-arduino) for pushing datapoint objects to a Firebase Realtime DB
-*[NTPClient](https://github.com/arduino-libraries/NTPClient) for retrieving a UTC timestamp
-*[ArduinoJSON](https://github.com/bblanchon/ArduinoJson) for turning data into JSON objects to play nice with the Firebase library (Use Version 5.13.2)
-*[ESP8266 WiFi](https://github.com/esp8266/Arduino/tree/master/doc/esp8266wifi) for setting up wifi connection on ESP 12-E
-*[DHT](https://github.com/adafruit/DHT-sensor-library) for retrieving digital reads from the DHT11 sensor 
-*[OneWire](https://github.com/PaulStoffregen/OneWire) for interfacing with Dallas temperature sensors
-*[Dallas Temperature](https://github.com/milesburton/Arduino-Temperature-Control-Library) used in junction with OneWire for digital reads from DS18B20 bus line
+* [Firebase Arduino](https://github.com/FirebaseExtended/firebase-arduino) for pushing datapoint objects to a Firebase Realtime DB
+* [NTPClient](https://github.com/arduino-libraries/NTPClient) for retrieving a UTC timestamp
+* [ArduinoJSON](https://github.com/bblanchon/ArduinoJson) for turning data into JSON objects to play nice with the Firebase library (Use Version 5.13.2)
+* [ESP8266 WiFi](https://github.com/esp8266/Arduino/tree/master/doc/esp8266wifi) for setting up wifi connection on ESP 12-E
+* [DHT](https://github.com/adafruit/DHT-sensor-library) for retrieving digital reads from the DHT11 sensor 
+* [OneWire](https://github.com/PaulStoffregen/OneWire) for interfacing with Dallas temperature sensors
+* [Dallas Temperature](https://github.com/milesburton/Arduino-Temperature-Control-Library) used in junction with OneWire for digital reads from DS18B20 bus line
 
 #### Datapoint Structure
 The current set up creates a struct with air temperature and humidity reading as well as 2 soil temperature channels (the DS18B20s) which could be easily increased or changed to water temperature for a hydroponic operation.
