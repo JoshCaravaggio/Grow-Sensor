@@ -19,7 +19,7 @@ A breadboard schematic will be included soon
 
 ## Documentation
 
-#### Dependencies 
+### Dependencies 
 * [Firebase Arduino](https://github.com/FirebaseExtended/firebase-arduino) for pushing datapoint objects to a Firebase Realtime DB
 * [NTPClient](https://github.com/arduino-libraries/NTPClient) for retrieving a UTC timestamp
 * [ArduinoJSON](https://github.com/bblanchon/ArduinoJson) for turning data into JSON objects to play nice with the Firebase library (Use Version 5.13.2)
@@ -28,7 +28,7 @@ A breadboard schematic will be included soon
 * [OneWire](https://github.com/PaulStoffregen/OneWire) for interfacing with Dallas temperature sensors
 * [Dallas Temperature](https://github.com/milesburton/Arduino-Temperature-Control-Library) used in junction with OneWire for digital reads from DS18B20 bus line
 
-#### Datapoint Structure
+### Datapoint Structure
 The current set up creates a struct with air temperature and humidity reading as well as 2 soil temperature channels (the DS18B20s) which could be easily increased or changed to water temperature for a hydroponic operation.
 
 The datapoint is converted to a JSON object for pushing to firebase, and takes on the form:
@@ -42,20 +42,20 @@ The datapoint is converted to a JSON object for pushing to firebase, and takes o
 }
 The program is designed such that even if a read fails, the associated field is populated with -127.00, which is effectively an error code we use such that the JSON still contains the appropriate data types for the DB push.
 
-#### Functions
+### Functions
 
 These are the modules used in the data collection and transmission loop, I left out the debugging functions because they're pretty self explanatory. Need to implement a unit testing harness eventually
 
-####String dataToJSON(dataReading* record, int timestamp)
+#### String dataToJSON(dataReading* record, int timestamp)
 Function to create a JSON string out of a dataReading and a collected timestamp
 params: address of dataReading to be JSONified, integer timestamp
 returns : JSON string of data 
 
-####void collectData(dataReading* record)
+#### void collectData(dataReading* record)
 Fuction to collect environmental data from the DHT and DS18 sensors
 params: address of dataReading to be populated with collected data
 
-####void pushDataToDatabase(JsonObject& datapointObject)
+#### void pushDataToDatabase(JsonObject& datapointObject)
 Function to push a datapoint to the firebase database
 params: datapoint object to be pushed to the firebase realtime database
  
