@@ -20,8 +20,9 @@ A breadboard schematic will be included soon
 ## Documentation
 
 #### Dependencies 
-(Firebase Arduino)[https://github.com/FirebaseExtended/firebase-arduino] for pushing datapoint objects to a Firebase Realtime DB
-(https://github.com/arduino-libraries/NTPClient "NTPClient") for retrieving a UTC timestamp
+[Firebase Arduino](https://github.com/FirebaseExtended/firebase-arduino) for pushing datapoint objects to a Firebase Realtime DB
+
+(https://github.com/arduino-libraries/NTPClient) for retrieving a UTC timestamp
 (https://github.com/bblanchon/ArduinoJson "ArduinoJSON ") for turning data into JSON objects to play nice with the Firebase library (Use Version 5.13.2)
 (https://github.com/esp8266/Arduino/tree/master/doc/esp8266wifi "ESP8266 Wifi") for setting up wifi connection on ESP 12-E
 (https://github.com/adafruit/DHT-sensor-library "DHT") for retrieving digital reads from the DHT11 sensor 
