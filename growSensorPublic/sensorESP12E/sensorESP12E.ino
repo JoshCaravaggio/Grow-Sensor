@@ -53,6 +53,7 @@ int delayMinutes = 1;                                 //  Amount of minutes betw
 
 // Function to create a JSON string out of a dataReading and a collected timestamp
 // params: address of dataReading to be JSONified, integer timestamp
+// return: JSON string of data 
 String dataToJSON(dataReading *record, int timestamp){
   
   String JSONrecord;
@@ -219,7 +220,7 @@ void setup () {
 
 
 }
-
+// Main loop of the program
 void loop() {
 
   // Initiating both sensor reads at the start of the loop and the NTP time client for timestamps, helps to avoid sensors from failing from experience
