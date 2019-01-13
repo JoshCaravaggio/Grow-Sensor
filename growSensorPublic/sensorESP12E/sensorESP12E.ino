@@ -7,7 +7,6 @@
 #include <NTPClient.h>
 #include <ArduinoJson.h>
 #include <ESP8266WiFi.h>
-#include <ESP8266HTTPClient.h>
 #include <DHT.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
@@ -39,7 +38,6 @@ const int DHTPin = 2;                                // Decleration of DHT pin
 const int DS18Pin1 = 0;                              // Decleration of first DS18B20 bus line pin
 
 
-HTTPClient client;                                  // HTTP Client for data transmissions
 float airTemperature;                               // Floats used for sensor values
 float airHumidity;                                  
 float soilTemperature1; 
