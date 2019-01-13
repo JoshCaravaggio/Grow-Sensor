@@ -46,16 +46,16 @@ The program is designed such that even if a read fails, the associated field is 
 
 These are the modules used in the data collection and transmission loop, I left out the debugging functions because they're pretty self explanatory. Need to implement a unit testing harness eventually
 
-**String dataToJSON(dataReading *record, int timestamp)**
+####String dataToJSON(dataReading* record, int timestamp)
 Function to create a JSON string out of a dataReading and a collected timestamp
 params: address of dataReading to be JSONified, integer timestamp
 returns : JSON string of data 
 
-**void collectData(dataReading *record)**
+####void collectData(dataReading* record)
 Fuction to collect environmental data from the DHT and DS18 sensors
 params: address of dataReading to be populated with collected data
 
-**void pushDataToDatabase(JsonObject& datapointObject)**
+####void pushDataToDatabase(JsonObject& datapointObject)
 Function to push a datapoint to the firebase database
 params: datapoint object to be pushed to the firebase realtime database
  
