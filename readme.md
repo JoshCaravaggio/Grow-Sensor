@@ -10,10 +10,10 @@ After the server side is perfected and code cleaned up for a public repo that wi
 ## Setup
 
 The code is embedded on an ESP-12E MCU running NodeMCU and being programmed with the arduino IDE. The full design fits onto a breadboard quite easily, and the code written here requires:
-1x ESP-12E with NodeMCU
-2x DS18B20 Dallas Waterproof Temperature Sensors
-1x DHT11 Digital Air & Relative Humidity Sensor
-1x MB102 Breadboard Power Supply (Or any other way the sensors and board could be powered)
+* 1x ESP-12E with NodeMCU
+* 2x DS18B20 Dallas Waterproof Temperature Sensors
+* 1x DHT11 Digital Air & Relative Humidity Sensor
+* 1x MB102 Breadboard Power Supply (Or any other way the sensors and board could be powered)
 
 A breadboard schematic will be included soon
 
