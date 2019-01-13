@@ -1,13 +1,13 @@
-#ESP 12-E Grow Sensor Embedded Code
-####By Joshua Caravaggio
+# ESP 12-E Grow Sensor Embedded Code
+#### By Joshua Caravaggio
 
-##Description
+## Description
 
 This is the embedded code for a cheap grow sensor that can be used to collect environmental data for indoor growing operations. The server side of this system is a Node.js application hosted on Firebase and utilizing their realtime DB, and could be easily expanded to a net of sensors with some modifications (really just a sensor identifier member in the datapoint structure). 
 
 After the server side is perfected and code cleaned up for a public repo that will be uploaded
 
-##Setup
+## Setup
 
 The code is embedded on an ESP-12E MCU running NodeMCU and being programmed with the arduino IDE. The full design fits onto a breadboard quite easily, and the code written here requires:
 1x ESP-12E with NodeMCU
@@ -17,9 +17,9 @@ The code is embedded on an ESP-12E MCU running NodeMCU and being programmed with
 
 A breadboard schematic will be included soon
 
-##Documentation
+## Documentation
 
-####Dependencies 
+#### Dependencies 
 (https://github.com/FirebaseExtended/firebase-arduino "Firebase Arduino") for pushing datapoint objects to a Firebase Realtime DB
 (https://github.com/arduino-libraries/NTPClient "NTPClient") for retrieving a UTC timestamp
 (https://github.com/bblanchon/ArduinoJson "ArduinoJSON ") for turning data into JSON objects to play nice with the Firebase library (Use Version 5.13.2)
@@ -28,7 +28,7 @@ A breadboard schematic will be included soon
 (https://github.com/PaulStoffregen/OneWire "OneWire") for interfacing with Dallas temperature sensors
 (https://github.com/milesburton/Arduino-Temperature-Control-Library "Dallas Temperature") used in junction with OneWire for digital reads from DS18B20 bus line
 
-####Datapoint Structure
+#### Datapoint Structure
 The current set up creates a struct with air temperature and humidity reading as well as 2 soil temperature channels (the DS18B20s) which could be easily increased or changed to water temperature for a hydroponic operation.
 
 The datapoint is converted to a JSON object for pushing to firebase, and takes on the form:
@@ -42,7 +42,7 @@ The datapoint is converted to a JSON object for pushing to firebase, and takes o
 }
 The program is designed such that even if a read fails, the associated field is populated with -127.00, which is effectively an error code we use such that the JSON still contains the appropriate data types for the DB push.
 
-####Functions
+#### Functions
 
 
 
